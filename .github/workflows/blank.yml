@@ -24,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      - run: mkdir bin
+      - run: mkdir -p bin
       
       - name: Build cpp
         run: |
