@@ -33,12 +33,15 @@ jobs:
       - name: Verify clean directory
         run: git diff --exit-code
         shell: bash
+        
+      - name: Display structure of downloaded files
+        run: ls -R
 
       - name: Upload binary
         uses: actions/upload-artifact@v3
         with:
           name: my-artifact
-          path: $bin/{bin_{matrix.os}}
+          path: bin/*
 
   upload:
     name: Upload
