@@ -29,6 +29,7 @@ jobs:
       - name: Build cpp
         run: |
           g++ src/hello.cpp -o bin/${{matrix.os}}
+          ./bin/${{matrix.os}}
       
       - name: Verify clean directory
         run: git diff --exit-code
